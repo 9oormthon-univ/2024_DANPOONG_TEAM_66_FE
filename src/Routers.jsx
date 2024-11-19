@@ -1,6 +1,8 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Layout from './pages/_Layout.jsx'
-import MainPage from './pages/MainPage.jsx'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Layout from './pages/_Layout.jsx';
+import MainPage from './pages/MainPage.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
 
 export default function Routers() {
   const router = createBrowserRouter([
@@ -9,6 +11,8 @@ export default function Routers() {
       element: <Layout />,
       children: [
         { path: '/', element: <MainPage /> },
+        { path: '/login', element: <Login /> },
+        { path: '/register', element: <Register /> },
       ],
     },
     {
