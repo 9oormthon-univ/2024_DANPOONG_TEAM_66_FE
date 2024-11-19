@@ -42,7 +42,7 @@ export default function Header() {
           alt='logo'
           className='h-10'
         />
-        <h1 className='text-white text-3xl'>Internettern</h1>
+        <h1 className='text-white text-3xl font-kreon'>Internettern</h1>
       </div>
 
       {/* 네비게이션 */}

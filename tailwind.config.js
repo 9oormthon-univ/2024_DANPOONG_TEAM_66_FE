@@ -6,7 +6,11 @@ module.exports = {
     './components/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        kreon: ['"Kreon"', 'serif'], // Kreon 폰트 추가
+      },
+    },
   },
   plugins: [],
 }
