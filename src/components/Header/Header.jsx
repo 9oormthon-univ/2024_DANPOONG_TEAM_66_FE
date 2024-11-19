@@ -61,7 +61,7 @@ export default function Header() {
         <nav
           className={cn(
             'flex flex-row rounded-full bg-white text-[#142D6F] text-sm',
-            'p-3 m-4 gap-14 px-10'
+            'p-3 m-4 gap-6 lg:gap-14 px-10'
           )}
         >
           <button onClick={() => navigate('/')}>
