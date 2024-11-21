@@ -15,7 +15,7 @@ export default function Login() {
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         {/* 로고 및 제목 */}
         <div className="flex flex-col items-center mb-8">
-          <div className="flex items-center bg-[#92C98E] px-4 py-3 rounded-lg mb-4">
+          <div className="flex items-center bg-theme-green px-4 py-3 rounded-lg mb-4">
             <img src={Logo} alt="로고" className="w-16 h-16 mr-2" />
             <h1 className="text-3xl font-bold text-white font-kreon">
               Internet<span className="text-red-800">tern</span>
