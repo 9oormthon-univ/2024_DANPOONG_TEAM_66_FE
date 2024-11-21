@@ -77,7 +77,7 @@ export default function Header() {
             Community
           </button>
           <button 
-            onClick={() => navigate('/mytasks')}
+            onClick={() => navigate('/mypage')}
             className='flex items-center'
           >
             My Page <FaAngleDown className='inline ml-1'/>
