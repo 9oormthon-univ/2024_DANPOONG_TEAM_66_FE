@@ -28,7 +28,7 @@ const tasks = [
 export default function TaskPage() {
   return (
     <div>
-      <div className='grid grid-cols-2 gap-10 px-10 mt-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-10 mt-10'>
         {tasks.map((task) => (
           <div 
             key={task.id}
