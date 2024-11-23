@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import MyPage from './pages/MyPage.jsx';
+import Ourservice from './pages/Ourservice.jsx';
 
 export default function Routers() {
   const router = createBrowserRouter([
@@ -14,7 +15,8 @@ export default function Routers() {
         { path: '/', element: <MainPage /> },
         { path: '/login', element: <Login /> },
         { path: '/register', element: <Register /> },
-        { path: '/mypage', element: <MyPage /> },
+        { path: '/mypage/*', element: <MyPage /> },
+        { path: '/ourservice', element: <Ourservice />},
       ],
     },
     {
