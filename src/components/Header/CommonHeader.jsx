@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import cn from '../../utils/cn';
 import { HiMenu } from "react-icons/hi";
@@ -49,6 +49,7 @@ export default function CommonHeader() {
           <MobileMenu
             openMobileMenu={openMobileMenu}
             setOpenMobileMenu={setOpenMobileMenu}
+            ProfileData={ProfileData}
           />
         </>
       ) : (
