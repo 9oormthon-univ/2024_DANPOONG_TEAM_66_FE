@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 // 멘토링 요청 및 승인 현황
 // 특정 유저 id를 같이 보낼 예정
 // 이것과 별개로 특정 id에게 요청 보내기, 요청 거절하기, 요청 수락하기 api도 필요
-const MentoringStatus = {
-  mentoringRequest: [
+const MentoringStatus = [
     {
       id: 1,
       name: "박민수",
-      interset: "마케팅",
+      intereset: "마케팅",
       status: "요청중",
       badgeData: [
         {
@@ -33,7 +32,7 @@ const MentoringStatus = {
     {
       id: 2,
       name: "김철수",
-      interset: "프로그래밍",
+      intereset: "프로그래밍",
       status: "요청중",
       badgeData: [
         {
@@ -57,7 +56,7 @@ const MentoringStatus = {
     {
       id: 3,
       name: "이영희",
-      interset: "프로그래밍",
+      intereset: "프로그래밍",
       status: "요청받음",
       badgeData: [
         {
@@ -78,12 +77,11 @@ const MentoringStatus = {
         },
       ],
     },
-  ]
-};
+  ];
 
 
 export default function useMentoringStatus() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
