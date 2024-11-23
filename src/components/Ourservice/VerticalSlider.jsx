@@ -1,28 +1,48 @@
 import { useState } from "react";
 
+import Bronze from '../../assets/Badges/Bronze.svg';
+import Gold from '../../assets/Badges/Gold.svg';
+import Normal from '../../assets/Badges/Normal.svg';
+import Silver from '../../assets/Badges/Silver.svg';
+import Blank from '../../assets/Badges/Blank.svg';
+
 export default function VerticalSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const badgeImages = {
+    Blank: Blank,
+    Normal: Normal,
+    Bronze: Bronze,
+    Silver: Silver,
+    Gold: Gold
+  };
+  
+
   const items = [
     {
-      title: "효율적인 진행",
-      description: "일반적인 인턴십보다 더 소소한 업무를 담당하며 원하는 곳에서 실무를 경험해 보세요.",
-      icon: "📅",
+      title: "단풍",
+      description: "단풍이 물들면서 아름다운 단풍 나무를 만들어가며 성장하는 청년 인턴",
+      icon: "Blank",
     },
     {
-      title: "멘토링 & 피드백",
-      description: "현업의 실무자와 멘토링 및 피드백을 받을 수 있는 기회를 제공합니다.",
-      icon: "💬",
+      title: "과제 뱃지; 1점",
+      description: "일반 과제를 통해 실무 경험을 엿보고, 한발자국씩 성장하는 청년 인턴 ",
+      icon: "Normal",
     },
     {
-      title: "미니인턴 기획안",
-      description: "구직활동을 위한 실무 경험과 포트폴리오를 제작할 수 있는 기회를 제공합니다.",
-      icon: "📝",
+      title: "멘티 뱃지; 5점",
+      description: "꾸준히 배우고자 하는 자세와 열정을 가지고 자신의 꿈을 위해 질문하는 청년 인턴",
+      icon: "Bronze",
     },
     {
-      title: "미니인턴 기획안",
-      description: "구직활동을 위한 실무 경험과 포트폴리오를 제작할 수 있는 기회를 제공합니다.",
-      icon: "📝",
+      title: "멘토 뱃지; 10점",
+      description: "청년 인턴들에세 희망적인 방향을 제시하고, 긍정적인 에너지로 함께 성장해가는 멘토",
+      icon: "Silver",
+    },
+    {
+      title: "기업 뱃지; 20점",
+      description: "기업이 제공한 과제를 성공적으로 수행하여 앞으로의 길에 변화와 혁신의 가능성을 열어가는 청년 인턴",
+      icon: "Gold",
     },
   ];
 
@@ -35,49 +55,79 @@ export default function VerticalSlider() {
   };
 
   return (
-    <div className="flex flex-row items-center bg-[#45666] p-6 gap-8">
+    <div className="flex flex-row items-center bg-[#45666] p-4 md:p-6 gap-4 md:gap-8">
       {/* 슬라이더 영역 */}
-      <div className="relative w-[1200px] h-[150px] overflow-hidden">
+      <div className="relative w-full md:w-[1200px] h-[150px] md:h-[200px] overflow-hidden">
         <div
           className="relative transition-transform duration-500"
           style={{
-            transform: `translateY(-${currentIndex * 20}vh)`, // 슬라이드를 한 항목씩 이동
-            height: `${items.length * 20}vh`, // 슬라이드 컨테이너의 전체 높이 설정
+            transform: `translateY(-${currentIndex * (30)}vh)`,
+            height: `${items.length * 30}vh`,
           }}
         >
           {items.map((item, index) => (
             <div
               key={index}
               className="w-full flex-shrink-0"
-              style={{ height: "20vh" }} // 각 슬라이드 항목의 높이를 100vh로 설정
+              style={{ height: "30vh" }}
             >
-              <div className="flex items-center h-[150px] bg-white p-6 shadow-lg rounded-lg gap-10">
-                <div className="text-6xl mb-4">{item.icon}</div>
-                <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
-                <p className="text-gray-700 text-center">{item.description}</p>
+              {/* 모바일/데스크톱 조건부 렌더링 */}
+              <div className="hidden md:flex items-center bg-white p-8 shadow-lg rounded-lg">
+                <div className="flex items-center gap-4">
+                  <div className="flex">
+                    <img
+                      src={badgeImages[item.icon]}
+                      alt={item.icon}
+                      className="size-24 mb-2"
+                    />
+                    <span className="text-gray-600">{item.icon}</span>
+                  </div>
+                  <div className="flex flex-col flex-1">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                      {item.title}
+                    </h2>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+ 
+              {/* 모바일 전용 레이아웃 */}
+              <div className="md:hidden flex items-center bg-white p-4 shadow-lg rounded-lg">
+                <div className="flex flex-col items-center w-full">
+                  <img
+                    src={badgeImages[item.icon]}
+                    alt={item.icon}
+                    className="h-16 w-16 mb-2"
+                  />
+                  <h2 className="text-lg font-semibold text-gray-800">
+                    {item.title}
+                  </h2>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
+ 
       {/* 네비게이션 버튼 */}
-      <div className="flex flex-col items-center gap-4 mt-6">
+      <div className="flex flex-col items-center gap-2 md:gap-4 mt-0 md:mt-6">
         <button
           onClick={handlePrev}
           className="p-2 bg-gray-300 rounded-full shadow hover:bg-gray-400 disabled:opacity-50 transition"
-          disabled={currentIndex === 0} // 첫 번째 요소일 때 비활성화
+          disabled={currentIndex === 0}
         >
           ▲
         </button>
         <button
           onClick={handleNext}
           className="p-2 bg-gray-300 rounded-full shadow hover:bg-gray-400 disabled:opacity-50 transition"
-          disabled={currentIndex === items.length - 1} // 마지막 요소일 때 비활성화
+          disabled={currentIndex === items.length - 1}
         >
           ▼
         </button>
       </div>
     </div>
   );
-}
+ }
