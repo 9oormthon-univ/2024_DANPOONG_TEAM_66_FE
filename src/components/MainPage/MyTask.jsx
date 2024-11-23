@@ -2,13 +2,13 @@ import Card from './Card';
 
 export default function MyTask({ userTasks }) {
   return (
-    <div className="w-full sm:w-[40%] lg:w-[20%] p-4 bg-[#A4A9B763] bg-opacity-35 rounded-lg shadow-lg mb-10 sm:mb-60">
+    <div className="w-full p-4 bg-[#A4A9B763] bg-opacity-35 rounded-lg shadow-lg mb-10 sm:mb-60">
       {/* My Task: 사용자 */}
       <div>
         <h1 className="text-lg font-bold text-gray-800">My Task : 사용자</h1>
         <p className="text-gray-600 text-xs mt-1">&gt; 작업중인 과제 목록</p>
         {/* 카드 컨테이너 */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3">
+        <div className="grid grid-cols-2 gap-3 mt-3">
           {userTasks.map((task, index) => (
             <Card
               key={index}
