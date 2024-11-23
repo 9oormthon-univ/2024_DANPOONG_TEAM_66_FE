@@ -9,7 +9,7 @@
 ## Members
 | 정채희 | [노은서](https://github.com/podkeke) | [송윤석](https://github.com/karpitony) | [한상협](https://github.com/hans6988) | 이태균 | [이현규](https://github.com/hy30nq) |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| <img width=100 src="https://avatars.githubusercontent.com/u/87839885?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/151901774?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/87839885?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/144535698?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/87839885?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/121498814?v=4"/> |
+| <img width=100 src="./public/Favicon.svg"/> | <img width=100 src="https://avatars.githubusercontent.com/u/151901774?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/87839885?v=4"/> | <img width=100 src="https://avatars.githubusercontent.com/u/144535698?v=4"/> | <img width=100 src="./public/Favicon.svg"/> | <img width=100 src="https://avatars.githubusercontent.com/u/121498814?v=4"/> |
 | 디자인 | 프론트엔드 | 프론트엔드 | 프론트엔드 | 백엔드 | 백엔드 |
 
 ## Stacks
