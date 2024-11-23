@@ -26,7 +26,12 @@ const userData = {
 };
 
 export default function useProfileData() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    profile: '',
+    name: '',
+    email: '',
+    badgeData: [],
+  });
 
   useEffect(() => {
     const fetchData = async () => {

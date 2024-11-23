@@ -2,8 +2,8 @@ import { useState } from "react";
 import MenuButton from "../components/Common/MenuButton";
 import MobileMenuButton from "../components/Common/MobileMenuButton";
 import cn from "../utils/cn";
-import MentoringRequest from "../components/Community/MentoringRequest";
-import MyMentoring from "../components/Community/MyMentoring";
+import RequestPage from "../components/Community/Request/RequestPage";
+import MyMentoringPage from "../components/Community/MyMentoring/MyMentoringPage";
 
 export default function Community() {
   const [buttonClicked, setButtonClicked] = useState('멘토링 요청');
@@ -46,8 +46,8 @@ export default function Community() {
 
         {/* 콘텐츠 영역 */}
         <div className="flex-1">
-          {buttonClicked === "멘토링 요청" && <MentoringRequest />}
-          {buttonClicked === "나의 멘토링" && <MyMentoring />}
+          {buttonClicked === "멘토링 요청" && <RequestPage />}
+          {buttonClicked === "나의 멘토링" && <MyMentoringPage />}
         </div>
       </div>
     </div>
