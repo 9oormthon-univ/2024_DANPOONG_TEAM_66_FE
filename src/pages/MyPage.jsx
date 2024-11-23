@@ -6,8 +6,8 @@ export default function MyPage() {
   return (
     <>
       <Routes>
-        <Route path="user/*" element={<MyPage_User />} />
-        <Route path="company/*" element={<MyPage_Company />} />
+        <Route path="user" element={<MyPage_User />} />
+        <Route path="company" element={<MyPage_Company />} />
         <Route path="*" element={<Navigate to="user" replace />} />
       </Routes>
     </>
