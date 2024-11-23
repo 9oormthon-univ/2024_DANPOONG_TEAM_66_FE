@@ -137,10 +137,6 @@ export default function MainPageHeader() {
                 'p-5 gap-12 mr-4'
               )}
             >
-
-              <button onClick={() => navigate('/home')} className="flex items-center justify-center w-24 h-2 rounded-full ml-10">Home</button>
-              <button onClick={() => navigate('/register')} className="flex items-center justify-center w-24 h-2 rounded-full">서비스 소개</button>
-
               <button 
                 onClick={() => navigate('/')}
                 className="flex items-center justify-center w-24 h-2 rounded-full ml-10"
