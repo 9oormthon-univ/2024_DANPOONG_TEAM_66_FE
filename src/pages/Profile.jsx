@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import cn from '../utils/cn';
 import DefaultProfile from '../assets/icons/ProfileLg.svg';
 import Pencil from '../assets/icons/Pencil.svg';
-import useUserProfileData from '../hooks/useUserProfileData';
+import useProfileData from '../hooks/useProfileData';
 
 export default function Profile() {
-  const userData = useUserProfileData(); // 유저 데이터 가져오기
+  const userData = useProfileData(); // 유저 데이터 가져오기
   const [nameInput, setNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
 

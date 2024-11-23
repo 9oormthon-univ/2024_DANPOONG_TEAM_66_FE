@@ -7,8 +7,8 @@ const userData = {
   email: 'kakakako@gmail.com',
 };
 
-export default function useUserProfileData() {
-  const [data, setData] = useState(null);
+export default function useProfileData() {
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
