@@ -5,9 +5,12 @@ import { HiMenu } from "react-icons/hi";
 import { FaAngleDown } from "react-icons/fa6";
 import MobileMenu from './MobileMenu';
 import Logo from '../../assets/Logo.svg';
+import useProfileData from '../../hooks/useProfileData';
+import DefaultProfile from '../../assets/icons/ProfileLg.svg';
 
 export default function CommonHeader() {
   const navigate = useNavigate();
+  const ProfileData = useProfileData(); // ProfileData 초기값은 {}
   const [isMobile, setIsMobile] = useState(false);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
@@ -46,22 +49,35 @@ export default function CommonHeader() {
           <MobileMenu
             openMobileMenu={openMobileMenu}
             setOpenMobileMenu={setOpenMobileMenu}
+            ProfileData={ProfileData}
           />
         </>
       ) : (
-        <nav
-          className={cn(
-            'flex flex-row rounded-full bg-white text-[#142D6F] text-sm lg:text-lg',
-            'p-3 m-3 gap-8 lg:gap-16 xl:gap-20 px-12 lg:px-20'
+        <div className='flex flex-row justify-end items-center'>
+          {ProfileData?.profile ? (
+            <img
+              src={ProfileData.profile || DefaultProfile}
+              alt="profile"
+              className="w-12 h-12 rounded-full mr-1"
+              onClick={() => navigate('/profile')}
+            />
+          ) : (
+            <div className="w-12 h-12 rounded-full bg-gray-300 animate-pulse"></div>
           )}
-        >
-          <button onClick={() => navigate('/')}>Home</button>
-          <button onClick={() => navigate('/introduce')}>서비스 소개</button>
-          <button onClick={() => navigate('/community')}>Community</button>
-          <button onClick={() => navigate('/mypage')} className="flex items-center">
-            My Page <FaAngleDown className="inline ml-1" />
-          </button>
-        </nav>
+          <nav
+            className={cn(
+              'flex flex-row rounded-full bg-white text-[#142D6F] text-sm lg:text-lg',
+              'p-3 m-3 gap-8 lg:gap-16 xl:gap-20 px-12 lg:px-20'
+            )}
+          >
+            <button onClick={() => navigate('/')}>Home</button>
+            <button onClick={() => navigate('/ourservice')}>Our Service</button>
+            <button onClick={() => navigate('/community')}>Community</button>
+            <button onClick={() => navigate('/mypage')} className="flex items-center">
+              My Page <FaAngleDown className="inline ml-1" />
+            </button>
+          </nav>
+        </div>
       )}
     </header>
   );
