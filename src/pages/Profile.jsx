@@ -1,17 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from '../utils/cn';
 import DefaultProfile from '../assets/icons/ProfileLg.svg';
 import Pencil from '../assets/icons/Pencil.svg';
-
-const userData = {
-  profile: 'https://avatars.githubusercontent.com/u/81866624?v=4',
-  name: '홍길동',
-  email: 'kakakako@gmail.com',
-};
+import useUserProfileData from '../hooks/useUserProfileData';
 
 export default function Profile() {
-  const [nameInput, setNameInput] = useState(userData.name);
-  const [emailInput, setEmailInput] = useState(userData.email);
+  const userData = useUserProfileData(); // 유저 데이터 가져오기
+  const [nameInput, setNameInput] = useState('');
+  const [emailInput, setEmailInput] = useState('');
+
+  useEffect(() => {
+    if (userData) {
+      setNameInput(userData.name);
+      setEmailInput(userData.email);
+    }
+  }, [userData]);
+
+  if (!userData) {
+    return <div className="flex justify-center items-center min-h-[90vh]">Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col justify-center items-center w-full min-h-[90vh] px-4">
