@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import UserListBox from './UserListBox';
-import Dropdown from './Dropdown';
+import Dropdown from './DropDown';
 
 // 더미 유저 데이터
 const userDataList = [
