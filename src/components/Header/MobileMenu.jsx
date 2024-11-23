@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import cn from '../../utils/cn';
+import DefaultProfile from '../../assets/icons/ProfileLg.svg';
 
 export default function MobileMenu({ openMobileMenu, setOpenMobileMenu, ProfileData }) {
   const navigate = useNavigate();
