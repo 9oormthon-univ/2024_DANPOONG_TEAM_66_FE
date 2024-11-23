@@ -51,16 +51,16 @@ export default function Profile() {
       <div className="flex flex-wrap gap-4 mt-6">
         <button
           className={cn(
-            "border-2 border-blue-500 px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold",
-            "text-blue-500 hover:bg-blue-500 hover:text-white transition duration-300 text-sm sm:text-base"
+            "border border-[#797979] px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold",
+            "text-[#797979] transition duration-300 text-sm sm:text-base hover:bg-[#797979] hover:text-white"
           )}
         >
           저장하기
         </button>
         <button
           className={cn(
-            "border-2 border-red-500 px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold",
-            "text-red-500 hover:bg-red-500 hover:text-white transition duration-300 text-sm sm:text-base"
+            "border border-[#797979] px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold",
+            "text-[#797979] transition duration-300 text-sm sm:text-base hover:bg-[#797979] hover:text-white"
           )}
         >
           Logout
