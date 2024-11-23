@@ -63,7 +63,7 @@ export default function BadgeHeader({
         </button>
 
         {isOpen && (
-          <div className="absolute top-full left-0 bg-white border border-gray-300 mt-1 rounded-md shadow-lg w-32 z-10">
+          <div className="absolute top-full left-0 bg-white border border-gray-300 mt-1 rounded-md shadow-lg w-32 z-5">
             {options.map((option) => (
               <button
                 key={option}
