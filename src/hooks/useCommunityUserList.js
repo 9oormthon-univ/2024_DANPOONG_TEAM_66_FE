@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 // 더미데이터
 // 특정 유저 id 함께 첨부가 아닌 모든 유저 목록을 그냥 요청하는 경우
 const CommunityUserList = [
