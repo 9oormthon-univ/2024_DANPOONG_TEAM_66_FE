@@ -101,7 +101,10 @@ export default function CommonHeader() {
             <div
               className="relative flex items-center group"
             >
-              <button className="flex items-center justify-center w-28 h-8">
+              <button 
+                onClick={() => navigate('/community')}
+                className="flex items-center justify-center w-28 h-8"
+              >
                 Community
                 <BiChevronDown className="text-2xl text-black ml-1" />
               </button>
@@ -129,7 +132,10 @@ export default function CommonHeader() {
             <div
               className="relative flex items-center group"
             >
-              <button className="flex items-center justify-center w-28 h-8">
+              <button 
+                onClick={() => navigate('/mypage')}
+                className="flex items-center justify-center w-28 h-8"
+              >
                 My Page
                 <BiChevronDown className="text-2xl text-black ml-1" />
               </button>
