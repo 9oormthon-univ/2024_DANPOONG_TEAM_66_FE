@@ -15,7 +15,7 @@ export default function UserListBox({ userData }) {
           <h3 className="text-[#598564] font-medium text-lg w-20">{userData.Name}</h3>
         </div>
         <div className="flex items-center justify-start border-2 border-gray-300 rounded-lg px-4 py-2 w-full">
-          진행중
+          {userData.Task} 진행중
         </div>
       </div>
       <div className="flex-1 flex flex-row items-center justify-end text-sm text-gray-500 gap-4">
