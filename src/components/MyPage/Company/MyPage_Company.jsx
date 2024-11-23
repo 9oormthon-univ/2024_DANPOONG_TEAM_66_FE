@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cn from '../../../utils/cn';
-import MenuButton from '../MenuButton';
-import MobileMenuButton from '../MobileMenuButton';
+import MenuButton from '../../Common/MenuButton';
+import MobileMenuButton from '../../Common/MobileMenuButton';
 import TaskRegisterPage from './TaskRegister/TaskRegisterPage';
 import TaskStatus from './TaskStatus/TaskStatusPage';
 import { PiNoteBlank, PiCalendarCheck } from "react-icons/pi";

@@ -1,20 +1,16 @@
-import { useState } from 'react';
-import cn from '../../../utils/cn';
-import MenuButton from '../../Common/MenuButton';
-import MobileMenuButton from '../../Common/MobileMenuButton';
-import TaskPage from './Tasks/TaskPage';
-import BadgePage from './Badges/BadgePage';
-import PortfolioPage from './Portfolio/PortfolioPage';
-import { GoStack, GoBookmark, GoFile } from "react-icons/go";
+import { useState } from "react";
+import MenuButton from "../components/Common/MenuButton";
+import MobileMenuButton from "../components/Common/MobileMenuButton";
+import cn from "../utils/cn";
+import RequestPage from "../components/Community/Request/RequestPage";
+import MyMentoringPage from "../components/Community/MyMentoring/MyMentoringPage";
 
-export default function MyPage() {
-  const [buttonClicked, setButtonClicked] = useState('과제 현황');
+export default function Community() {
+  const [buttonClicked, setButtonClicked] = useState('멘토링 요청');
   const menuItems = [
-    { icon: <GoStack />, text: "과제 현황" },
-    { icon: <GoBookmark />, text: "뱃지" },
-    { icon: <GoFile />, text: "포트폴리오" },
+    { text: "멘토링 요청" },
+    { text: "나의 멘토링" },
   ];
-
   return (
     <div className="h-screen flex flex-col">
       {/* 모바일 환경: 상단 메뉴 */}
@@ -22,7 +18,6 @@ export default function MyPage() {
         {menuItems.map((item) => (
           <MobileMenuButton
             key={item.text}
-            icon={item.icon}
             text={item.text}
             buttonClicked={buttonClicked}
             setButtonClicked={setButtonClicked}
@@ -51,9 +46,8 @@ export default function MyPage() {
 
         {/* 콘텐츠 영역 */}
         <div className="flex-1">
-          {buttonClicked === "과제 현황" && <TaskPage />}
-          {buttonClicked === "뱃지" && <BadgePage />}
-          {buttonClicked === "포트폴리오" && <PortfolioPage />}
+          {buttonClicked === "멘토링 요청" && <RequestPage />}
+          {buttonClicked === "나의 멘토링" && <MyMentoringPage />}
         </div>
       </div>
     </div>
