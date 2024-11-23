@@ -13,14 +13,14 @@ export default function MainPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-white flex flex-col md:flex-row items-center justify-center gap-6 md:gap-4 lg:gap-16 xl:gap-24 px-4 md:px-10 lg:px-16">
+    <div className="w-full bg-white flex flex-col md:flex-row px-10 gap-10">
       {/* MyTask 컴포넌트 */}
-      <div className="w-full md:w-auto flex-shrink-0">
+      <div className="flex lg:w-96">
         <MyTask userTasks={userTasks} />
       </div>
 
       {/* RecommendedTasks 컴포넌트 */}
-      <div className="w-full md:w-auto">
+      <div className="flex-1 ">
         <RecommendedTasks tasks={recommendedTasks} />
       </div>
     </div>
