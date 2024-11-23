@@ -8,6 +8,7 @@ const UserMentoringData = [
     id: 1,
     name: '홍길동',
     mentoring: "멘토",
+    email:"kakao E-mail: @@@",
     badgeData: [
       {
         badgeType: 'Green',
@@ -31,6 +32,7 @@ const UserMentoringData = [
     id: 2,
     name: '김철수',
     mentoring: "멘티",
+    email:"naver E-mail: @@@",
     badgeData: [
       {
         badgeType: 'Green',
@@ -54,6 +56,7 @@ const UserMentoringData = [
     id: 3,
     name: '이영희',
     mentoring: "멘토",
+    email:"gmail E-mail: @@@",
     badgeData: [
       {
         badgeType: 'Green',
@@ -77,6 +80,7 @@ const UserMentoringData = [
     id: 4,
     name: '박민수',
     mentoring: "멘티",
+    email:"daum E-mail: @@@",
     badgeData: [
       {
         badgeType: 'Green',
@@ -100,6 +104,7 @@ const UserMentoringData = [
     id: 5,
     name: '김미영',
     mentoring: "멘티",
+    email:"kakao E-mail: @@@",
     badgeData: [
       {
         badgeType: 'Green',
