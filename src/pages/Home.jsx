@@ -13,7 +13,7 @@ export default function Home() {
         <img
             src={Cloud}
             alt='groom'
-            className='absolute top-9 ml-12 object-cover'
+            className='absolute top-9 ml-12 object-cover hidden md:block'
           />
         <div className="w-full px-12 text-left mb-4 md:px-80">
         <h1 className="text-3xl font-bold text-gray-800">추천 과제</h1>
