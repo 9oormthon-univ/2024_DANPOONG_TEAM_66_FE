@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BadgeHeader from "./BadgeHeader";
+import TaskListBox from "../TaskListBox";
 
 // 더미 뱃지 데이터
 const BadgeData = {
@@ -35,13 +36,13 @@ export default function BadgePage() {
   const [selectedOption, setSelectedOption] = useState("전체");
 
   return (
-    <div className="px-10 mt-5">
+    <div className="px-1 md:px-10 mt-5">
       <BadgeHeader
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
         BadgeData={BadgeData}
       />
-      <h1>Badge</h1>
+      <TaskListBox taskData={BadgeData.badges} />
     </div>
   );
 }
