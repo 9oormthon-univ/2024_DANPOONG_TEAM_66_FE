@@ -12,7 +12,7 @@ const badgeIcons = {
 
 export default function MapleBadge({ badgeType, count }) {
   return (
-    <div className="relative w-12 h-12 flex items-center justify-center">
+    <div className="relative w-9 h-9 flex items-center justify-center">
       {/* 배지 아이콘 */}
       <img
         src={badgeIcons[badgeType]}
@@ -21,7 +21,7 @@ export default function MapleBadge({ badgeType, count }) {
       />
       {/* 배지 개수 (중앙 숫자) */}
       <span
-        className={`z-10 text-xl font-bold ${
+        className={`z-10 text-base font-bold ${
           badgeType === 'Yellow' ? 'text-black' : 'text-white'
         }`}
       >
