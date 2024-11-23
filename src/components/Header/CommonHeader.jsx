@@ -8,13 +8,13 @@ import Logo from '../../assets/Logo.svg';
 import useProfileData from '../../hooks/useProfileData';
 import DefaultProfile from '../../assets/icons/ProfileLg.svg';
 
-const DropdownMenu = ({ showDropdown, menuItems, style, zIndex = 20 }) => {
+const DropdownMenu = ({ showDropdown, menuItems, style, zIndex = 30 }) => {
   return (
     <div
       className={`z-100 absolute top-11 left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 ${
         showDropdown ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
       }`}
-      style={{ ...style }}
+      style={{ ...style, zIndex }}
     >
       <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
         {menuItems.map((item, index) => (
@@ -109,7 +109,7 @@ export default function CommonHeader() {
                 <BiChevronDown className="text-2xl text-black ml-1" />
               </button>
               <div
-                className={`absolute top-full left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto`}
+                className={`absolute top-full left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-20`}
               >
                 <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
                   <h1
@@ -140,7 +140,7 @@ export default function CommonHeader() {
                 <BiChevronDown className="text-2xl text-black ml-1" />
               </button>
               <div
-                className={`absolute top-full left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto`}
+                className={`absolute top-full left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto z-20`}
               >
                 <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
                   <h1
