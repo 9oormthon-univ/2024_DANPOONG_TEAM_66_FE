@@ -46,7 +46,7 @@ export default function TaskRegisterPage() {
       </div>
       {registerButtonClicked ? <Register /> : (
       <>
-      <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-10 mt-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-10 mt-6'>
         {taskList.map((task) => (
           <div 
             key={task.id}

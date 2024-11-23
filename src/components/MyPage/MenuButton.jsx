@@ -26,7 +26,7 @@ export default function MenuButton({ icon, text, buttonClicked, setButtonClicked
         {icon}
       </span>
       {/* 텍스트: 중앙 정렬 */}
-      <span className='text-lg lg:text-2xl'>
+      <span className='text-lg lg:text-xl'>
         {text}
       </span>
     </button>
