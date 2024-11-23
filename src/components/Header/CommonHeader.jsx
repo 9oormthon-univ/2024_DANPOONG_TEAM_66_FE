@@ -139,19 +139,19 @@ export default function CommonHeader() {
                 <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/user/tasks')}
+                    onClick={() => navigate('/mypage/mytask')}
                   >
                     과제 현황
                   </h1>
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/user/badges')}
+                    onClick={() => navigate('/mypage/badge')}
                   >
                     뱃지
                   </h1>
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/user/portfolio')}
+                    onClick={() => navigate('/mypage/portfolio')}
                   >
                     포트폴리오
                   </h1>
