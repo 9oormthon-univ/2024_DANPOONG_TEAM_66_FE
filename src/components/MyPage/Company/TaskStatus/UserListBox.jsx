@@ -1,4 +1,4 @@
-import ProfileIcon from '../../../../assets/icons/Profile.svg';
+import ProfileIcon from '../../../../assets/icons/ProfileSm.svg';
 
 export default function UserListBox({ userData }) {
   const defaultProfile = ProfileIcon; // 기본 프로필 아이콘
@@ -10,7 +10,7 @@ export default function UserListBox({ userData }) {
           <img
             src={userData.Profile || defaultProfile}
             alt="profile"
-            className="w-10 h-10 rounded-full border border-gray-300 mr-4"
+            className="w-10 h-10 rounded-full border border-gray-300 mr-3"
           />
           <h3 className="text-[#598564] font-medium text-lg w-20">{userData.Name}</h3>
         </div>
