@@ -15,7 +15,7 @@ export default function MenuButton({ icon, text, buttonClicked, setButtonClicked
     <button 
         onClick={() => setButtonClicked(text)}
         className={cn(
-          "relative rounded-lg border-2 p-2 mx-6 my-4 w-40 lg:w-56",
+          "relative rounded-lg border-2 p-2 mx-6 my-4 w-48 lg:w-56",
           buttonColorOn ? "bg-theme-green border-theme-green text-white" : "border-gray-400 bg-white text-black",
           "hover:bg-theme-green hover:border-theme-green hover:text-white",
           "transition duration-200 flex items-center justify-center"
