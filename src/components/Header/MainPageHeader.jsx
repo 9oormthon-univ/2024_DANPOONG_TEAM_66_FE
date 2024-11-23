@@ -138,7 +138,7 @@ export default function MainPageHeader() {
               )}
             >
               <button 
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/home')}
                 className="flex items-center justify-center w-24 h-2 rounded-full ml-10"
               >
                 Home
