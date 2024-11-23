@@ -5,7 +5,6 @@ import { HiMenu } from "react-icons/hi";
 import MobileMenu from './MobileMenu';
 import Logo from '../../assets/Logo.svg';
 import { BiChevronDown } from "react-icons/bi";
-import Vector from '../../assets/vector.svg';
 import Tree from '../../assets/Tree.svg';
 import Cloud from '../../assets/cloud.svg';
 import Information from '../../assets/information.svg';
@@ -48,11 +47,6 @@ export default function MainPageHeader() {
           onClick={handleLogoClick}
           className='flex flex-row cursor-pointer p-2'
         >
-          <img
-            src={Vector}
-            alt='vector'
-            className='absolute top-0 m-9 mb-2'
-          />
            <img
             src={Cloud}
             alt='groom'
