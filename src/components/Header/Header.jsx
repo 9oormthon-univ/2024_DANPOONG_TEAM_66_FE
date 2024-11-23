@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import cn from '../../utils/cn';
 import { HiMenu } from "react-icons/hi";
+import { FaAngleDown } from "react-icons/fa6"
 import MobileMenu from './MobileMenu';
 import Logo from '../../assets/Logo.svg';
 
@@ -31,7 +32,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='flex justify-between items-center bg-[#51667D] px-4'>
+    <header className='flex justify-between items-center bg-theme-green px-4'>
       {/* 로고 */}
       <div
         onClick={handleLogoClick}
@@ -42,7 +43,9 @@ export default function Header() {
           alt='logo'
           className='h-10'
         />
-        <h1 className='text-white text-3xl font-kreon'>Internettern</h1>
+        <h1 className='text-white text-3xl font-kreon font-bold'>Internet
+          <span className='text-theme-red'>tern</span>
+        </h1>
       </div>
 
       {/* 네비게이션 */}
@@ -60,24 +63,24 @@ export default function Header() {
       ) : (
         <nav
           className={cn(
-            'flex flex-row rounded-full bg-white text-[#142D6F] text-sm',
-            'p-3 m-4 gap-6 lg:gap-14 px-10'
+            'flex flex-row rounded-full bg-white text-[#142D6F] text-sm lg:text-lg',
+            'p-3 m-3 gap-8 lg:gap-16 xl:gap-20 px-12 lg:px-20'
           )}
         >
           <button onClick={() => navigate('/')}>
             Home
           </button>
-          <button onClick={() => navigate('/explore')}>
-            Explore
-          </button>
-          <button onClick={() => navigate('/mytasks')}>
-            My Tasks
+          <button onClick={() => navigate('/introduce')}>
+            서비스 소개
           </button>
           <button onClick={() => navigate('/community')}>
             Community
           </button>
-          <button onClick={() => navigate('/profile')}>
-            Profile
+          <button 
+            onClick={() => navigate('/mypage')}
+            className='flex items-center'
+          >
+            My Page <FaAngleDown className='inline ml-1'/>
           </button>
         </nav>
       )}
