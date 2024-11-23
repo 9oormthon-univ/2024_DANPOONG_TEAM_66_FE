@@ -142,7 +142,7 @@ export default function MainPageHeader() {
                 onMouseEnter={() => setShowMyPageDropdown(true)} // 마우스가 올려졌을 때
                 onMouseLeave={() => setShowMyPageDropdown(false)} // 마우스가 떠났을 때
               >
-                <button onClick={() => navigate('/mytasks')} 
+                <button onClick={() => navigate('/community')} 
                 className="flex items-center justify-center w-24 h-2 rounded-full"
                 >
                   community
@@ -157,7 +157,7 @@ export default function MainPageHeader() {
                 onMouseLeave={() => setShowMyPageDropdown(false)} // 마우스가 떠났을 때
               >
                 <button
-                  onClick={() => navigate('/community')}
+                  onClick={() => navigate('/mypage')}
                   className="flex items-center justify-center w-24 h-2 rounded-full mr-10"
                 >
                   My Page
