@@ -70,7 +70,7 @@ export default function CommonHeader() {
               'p-3 m-3 gap-8 lg:gap-16 xl:gap-20 px-12 lg:px-20'
             )}
           >
-            <button onClick={() => navigate('/')}>Home</button>
+            <button onClick={() => navigate('/home')}>Home</button>
             <button onClick={() => navigate('/ourservice')}>Our Service</button>
             <button onClick={() => navigate('/community')}>Community</button>
             <button onClick={() => navigate('/mypage')} className="flex items-center">
