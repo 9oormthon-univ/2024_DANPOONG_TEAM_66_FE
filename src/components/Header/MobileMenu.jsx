@@ -41,20 +41,11 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
-              navigate('/explore');
+              navigate('/introduce');
               closeMenu();
             }}
           >
-            Explore
-          </button>
-          <button
-            className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
-            onClick={() => {
-              navigate('/mytasks');
-              closeMenu();
-            }}
-          >
-            My Tasks
+            서비스 소개
           </button>
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
@@ -68,11 +59,11 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
-              navigate('/profile');
+              navigate('/mypage');
               closeMenu();
             }}
           >
-            Profile
+            My Page
           </button>
         </nav>
       </div>
