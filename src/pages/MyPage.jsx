@@ -2,9 +2,9 @@ import { useState } from 'react';
 import cn from '../utils/cn';
 import MenuButton from '../components/MyPage/MenuButton';
 import MobileMenuButton from '../components/MyPage/MobileMenuButton';
-import TaskPage from '../components/MyPage/Tasks/TaskPage';
-import BadgePage from '../components/MyPage/Badges/BadgePage';
-import PortfolioPage from '../components/MyPage/Portfolio/PortfolioPage';
+import TaskPage from '../components/MyPage/User/Tasks/TaskPage';
+import BadgePage from '../components/MyPage/User/Badges/BadgePage';
+import PortfolioPage from '../components/MyPage/User/Portfolio/PortfolioPage';
 import { GoStack, GoBookmark, GoFile } from "react-icons/go";
 
 export default function MyPage() {

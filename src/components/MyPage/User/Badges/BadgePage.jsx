@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BadgeHeader from "./BadgeHeader";
-import TaskListBox from "../TaskListBox";
+import TaskListBox from "../../TaskListBox";
 
 // 더미 뱃지 데이터
 const BadgeData = {

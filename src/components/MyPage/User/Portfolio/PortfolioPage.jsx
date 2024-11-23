@@ -1,4 +1,4 @@
-import TaskListBox from "../TaskListBox";
+import TaskListBox from "../../TaskListBox";
 
 // 더미 뱃지 데이터
 // Badge페이지와 동일한 데이터를 불러온다고 가정
