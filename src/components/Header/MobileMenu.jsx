@@ -59,7 +59,7 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
-              navigate('/mytasks');
+              navigate('/mypage');
               closeMenu();
             }}
           >
