@@ -8,13 +8,13 @@ import Logo from '../../assets/Logo.svg';
 import useProfileData from '../../hooks/useProfileData';
 import DefaultProfile from '../../assets/icons/ProfileLg.svg';
 
-const DropdownMenu = ({ showDropdown, menuItems, style, zIndex = 10 }) => {
+const DropdownMenu = ({ showDropdown, menuItems, style, zIndex = 20 }) => {
   return (
     <div
-      className={`absolute top-11 left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 ${
+      className={`z-100 absolute top-11 left-1/2 transform -translate-x-1/2 w-40 rounded-b-2xl shadow-md bg-white transition-all duration-200 ${
         showDropdown ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
       }`}
-      style={{ ...style, zIndex }}
+      style={{ ...style }}
     >
       <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
         {menuItems.map((item, index) => (
@@ -139,19 +139,19 @@ export default function CommonHeader() {
                 <div className="font-semibold text-black space-y-2 py-3 px-3 text-center">
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/mytask')}
+                    onClick={() => navigate('/mypage/user/tasks')}
                   >
                     과제 현황
                   </h1>
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/badge')}
+                    onClick={() => navigate('/mypage/user/badges')}
                   >
                     뱃지
                   </h1>
                   <h1
                     className="cursor-pointer hover:text-theme-red text-base md:text-lg"
-                    onClick={() => navigate('/mypage/portfolio')}
+                    onClick={() => navigate('/mypage/user/portfolio')}
                   >
                     포트폴리오
                   </h1>

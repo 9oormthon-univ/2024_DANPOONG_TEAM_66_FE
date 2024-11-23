@@ -7,8 +7,8 @@ import ScoreBadgeDisplay from './ScoreBadgeDisplay';
 
 export default function MentoringRequest() {
   const ProfileData = useProfileData();
-  const MentoringStatus = useMentoringStatus();
-  const CommunityUserList = useCommunityUserList();
+  const { data: MentoringStatus = [] } = useMentoringStatus(1);
+  const { data: CommunityUserList = [] } = useCommunityUserList();
   const [totalScore, setTotalScore] = useState(0);
 
   useEffect(() => {
@@ -27,19 +27,32 @@ export default function MentoringRequest() {
       <div className='flex flex-col items-center gap-4'>
         <h2 className='text-[#886363] text-2xl font-bold'>멘토링 승인 및 요청 현황</h2>
         <div className='bg-[#EFEFEF] rounded-lg w-full p-4 py-6'>
-          {MentoringStatus && MentoringStatus.map((mentor) => (
+          {MentoringStatus?.map((mentor) => (
             <MentorListBox key={mentor.id} mentorData={mentor} />
-          ))}
+          )) || <div>멘토링 요청이 없습니다.</div>}
         </div>
       </div>
 
       {/* 멘토 리스트 */}
-      <div className='flex flex-col items-center gap-4'>
-        <h2 className='text-[#886363] text-2xl font-bold'>멘토 리스트</h2>
-        <div className='bg-[#EFEFEF] rounded-lg w-full p-4 py-6'>
-          {CommunityUserList && CommunityUserList.map((mentor) => (
-            <MentorListBox key={mentor.id} mentorData={mentor} />
-          ))}
+      <div className="flex flex-col items-center gap-4">
+        <h2 className="text-[#886363] text-2xl font-bold">멘토 리스트</h2>
+        <div className="bg-[#EFEFEF] rounded-lg w-full p-4 py-6">
+          {CommunityUserList.length > 0 ? (
+            CommunityUserList.map((mentor) => (
+              <MentorListBox
+                key={mentor.id}
+                mentorData={{
+                  id: mentor.id,
+                  name: mentor.name,
+                  email: mentor.email,
+                  interest: mentor.interest?.name || 'N/A',
+                  badgeData: mentor.badgeData || [],
+                }}
+              />
+            ))
+          ) : (
+            <div>멘토 리스트가 없습니다.</div>
+          )}
         </div>
       </div>
     </div>
