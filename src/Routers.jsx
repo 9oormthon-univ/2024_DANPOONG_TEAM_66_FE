@@ -15,7 +15,7 @@ export default function Routers() {
         { path: '/', element: <MainPage /> },
         { path: '/login', element: <Login /> },
         { path: '/register', element: <Register /> },
-        { path: '/mypage', element: <MyPage /> },
+        { path: '/mypage/*', element: <MyPage /> },
         { path: '/ourservice', element: <Ourservice />},
       ],
     },

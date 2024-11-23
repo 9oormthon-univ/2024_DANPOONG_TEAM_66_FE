@@ -3,6 +3,7 @@ import cn from '../../../utils/cn';
 import MenuButton from '../MenuButton';
 import MobileMenuButton from '../MobileMenuButton';
 import TaskRegisterPage from './TaskRegister/TaskRegisterPage';
+import TaskStatus from './TaskStatus/TaskStatusPage';
 import { PiNoteBlank, PiCalendarCheck } from "react-icons/pi";
 
 // 더미 데이터
@@ -13,14 +14,15 @@ const companyData = {
 
 export default function MyPage_Company() {
   const [buttonClicked, setButtonClicked] = useState('과제 등록');
+
   const menuItems = [
     { icon: <PiNoteBlank />, text: "과제 등록" },
-    { icon: <PiCalendarCheck />, text: "과제 진행 상황" },
+    { icon: <PiCalendarCheck />, text: "과제 진행 현황" },
   ];
   return (
     <div className="h-screen flex flex-col">
       {/* 모바일 환경: 상단 메뉴 */}
-      <div className="flex md:hidden bg-white border-b border-gray-300 shadow-sm">
+      <div className="flex md:hidden bg-white border-b border-gray-300 shadow-sm mb-4">
         {menuItems.map((item) => (
           <MobileMenuButton
             key={item.text}
