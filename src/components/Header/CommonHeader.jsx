@@ -56,7 +56,7 @@ export default function CommonHeader() {
           )}
         >
           <button onClick={() => navigate('/')}>Home</button>
-          <button onClick={() => navigate('/introduce')}>서비스 소개</button>
+          <button onClick={() => navigate('/ourservice')}>Our Service</button>
           <button onClick={() => navigate('/community')}>Community</button>
           <button onClick={() => navigate('/mypage')} className="flex items-center">
             My Page <FaAngleDown className="inline ml-1" />

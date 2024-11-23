@@ -41,11 +41,11 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
-              navigate('/introduce');
+              navigate('/ourservice');
               closeMenu();
             }}
           >
-            서비스 소개
+            Our Service
           </button>
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"

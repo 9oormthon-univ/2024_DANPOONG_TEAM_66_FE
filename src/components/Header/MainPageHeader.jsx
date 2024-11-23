@@ -134,8 +134,18 @@ export default function MainPageHeader() {
                 'p-5 gap-12 mr-4'
               )}
             >
-              <button onClick={() => navigate('/')} className="flex items-center justify-center w-24 h-2 rounded-full ml-10">Home</button>
-              <button onClick={() => navigate('/register')} className="flex items-center justify-center w-24 h-2 rounded-full">서비스 소개</button>
+              <button 
+                onClick={() => navigate('/')}
+                className="flex items-center justify-center w-24 h-2 rounded-full ml-10"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => navigate('/ourservice')}
+                className="flex items-center justify-center w-24 h-2 rounded-full"
+              >
+                Our Service
+              </button>
               
               <div
                 className='flex items-center gap'
@@ -145,7 +155,7 @@ export default function MainPageHeader() {
                 <button onClick={() => navigate('/community')} 
                 className="flex items-center justify-center w-24 h-2 rounded-full"
                 >
-                  community
+                  Community
                   <BiChevronDown className="text-2xl text-[#142D6F] mt-1" />
                   </button>
               </div>
