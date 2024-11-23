@@ -4,7 +4,7 @@ import onlytree from '../assets/onlytree.svg';
 export default function Home() {
   return (
     <div
-        className="relative flex flex-col items-center py-10 object-cover z-[-1]"
+        className="relative flex flex-col items-center py-10 object-cover"
         style={{
             background: "linear-gradient(to top, white 60%, #BCD9F2 90%)",
         }}
@@ -13,14 +13,14 @@ export default function Home() {
         <img
             src={Cloud}
             alt='groom'
-            className='absolute top-9 ml-12 object-cover z-[-2]'
+            className='absolute top-9 ml-12 object-cover'
           />
         <div className="w-full px-12 text-left mb-4 md:px-80">
         <h1 className="text-3xl font-bold text-gray-800">추천 과제</h1>
         <p className="text-[#637267] text-xl font-bold">과제에서 포트폴리오로, 인턴까지</p>
       </div>
       {/* 가로 스크롤 컨테이너 */}
-      <div className="overflow-x-auto w-full px-6 md:px-80">
+      <div className="overflow-x-auto w-full px-6 md:px-80 z-0">
         <div className="flex space-x-6 py-6">
           {/* 카드 1 */}    
           <div className="w-[300px] h-[300px] bg-white rounded-lg shadow-md shrink-0">
@@ -148,9 +148,9 @@ export default function Home() {
         <img
                 src={onlytree}
                 alt='tree'
-                className='absolute bottom-0 mr-[700px] object-cover z-[-2] size-[800px] hidden md:block'
+                className='absolute bottom-0 mr-[700px] object-cover size-[800px] hidden md:block'
             />
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 px-10 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 px-10 mt-10 z-0">
         {/* 카드 반복 */}
         {Array.from({ length: 16 }).map((_, index) => (
             <div key={index} className="bg-[#C4C4C4] rounded-lg shadow-md flex flex-col justify-end h-48 w-60">
