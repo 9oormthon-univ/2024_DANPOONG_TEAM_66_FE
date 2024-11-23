@@ -51,11 +51,28 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu, ProfileD
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
+
+              navigate('/explore');
+              closeMenu();
+            }}
+          >
+            Explore
+          </button>
+          <button
+            className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
+            onClick={() => {
+              navigate('/mytasks');
+              closeMenu();
+            }}
+          >
+            My Tasks
+
               navigate('/ourservice');
               closeMenu();
             }}
           >
             Our Service
+
           </button>
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
@@ -69,11 +86,11 @@ export default function MobileMenu({ openMobileMenu, setOpenMobileMenu, ProfileD
           <button
             className="block w-full text-left text-lg text-gray-700 hover:text-blue-500"
             onClick={() => {
-              navigate('/mypage');
+              navigate('/profile');
               closeMenu();
             }}
           >
-            My Page
+            Profile
           </button>
         </nav>
       </div>
