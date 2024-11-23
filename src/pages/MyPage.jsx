@@ -2,6 +2,8 @@ import { useState } from 'react';
 import cn from '../utils/cn';
 import MenuButton from '../components/MyPage/MenuButton';
 import TaskPage from '../components/MyPage/Tasks/TaskPage';
+import BadgePage from '../components/MyPage/Badges/BadgePage';
+import PortfolioPage from '../components/MyPage/Portfolio/PortfolioPage';
 import { GoStack, GoBookmark, GoFile } from "react-icons/go";
 
 export default function MyPage() {
@@ -32,7 +34,9 @@ export default function MyPage() {
         />
       </div>
       <div className="flex-1 ">
-        <TaskPage />
+        {(buttonClicked === "과제 현황") && <TaskPage />}
+        {(buttonClicked === "뱃지") && <BadgePage />}
+        {(buttonClicked === "포트폴리오") && <PortfolioPage />}
       </div>
     </div>
   );
