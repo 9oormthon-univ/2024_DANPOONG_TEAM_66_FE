@@ -1,37 +1,9 @@
+import useUserTaskData from "../../../../hooks/useUserTaskData";
 import TaskListBox from "../../TaskListBox";
 
-// 더미 뱃지 데이터
-// Badge페이지와 동일한 데이터를 불러온다고 가정
-const BadgeData = {
-  score: 100,
-  mentoring: 30,
-  user: 10,
-  company: 50,
-  badges: [
-    {
-      id: 1,
-      badgeType: "Normal",
-      title: "(일반) 과제 제목",
-    },
-    {
-      id: 2,
-      badgeType: "Gold",
-      title: "(기업) 과제 제목",
-    },
-    {
-      id: 3,
-      badgeType: "Silver",
-      title: "(멘토링) 과제 제목",
-    },
-    {
-      id: 4,
-      badgeType: "Bronze",
-      title: "(사용자) 과제 제목",
-    }
-  ],
-}
-
 export default function PortfolioPage() {
+  const tasks = useUserTaskData();
+
   return (
     <div className="px-4 md:px-10 mt-5">
       <h2 className="font-bold text-xl text-gray-800 mb-4">기업 열람 포트폴리오</h2>
@@ -53,8 +25,9 @@ export default function PortfolioPage() {
           수정
         </button>
       </div>
-      <h2>기업 열람 과제</h2>
-      <TaskListBox taskData={BadgeData.badges} />
+
+      <h2 className="mt-6 font-bold text-xl text-gray-800">기업 열람 과제</h2>
+      <TaskListBox taskData={tasks} />
     </div>
   );
 }
