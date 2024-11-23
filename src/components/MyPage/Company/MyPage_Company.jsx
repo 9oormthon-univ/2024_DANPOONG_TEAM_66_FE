@@ -2,6 +2,7 @@ import { useState } from 'react';
 import cn from '../../../utils/cn';
 import MenuButton from '../MenuButton';
 import MobileMenuButton from '../MobileMenuButton';
+import TaskRegisterPage from './TaskRegister/TaskRegisterPage';
 import { PiNoteBlank, PiCalendarCheck } from "react-icons/pi";
 
 // 더미 데이터
@@ -54,10 +55,10 @@ export default function MyPage_Company() {
         </div>
 
         {/* 콘텐츠 영역 */}
-        {/* <div className="flex-1">
-          {buttonClicked === "과제 등록" && <TaskRegister />}
+        <div className="flex-1">
+          {buttonClicked === "과제 등록" && <TaskRegisterPage />}
           {buttonClicked === "과제 진행 현황" && <TaskStatus />}
-        </div> */}
+        </div>
       </div>
     </div>
   )

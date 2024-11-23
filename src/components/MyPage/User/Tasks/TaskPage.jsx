@@ -1,4 +1,4 @@
-import TaskBox from './TaskBox';
+import TaskBox from '../../TaskBox';
 
 // 더미데이터
 const taskList = [
