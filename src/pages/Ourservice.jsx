@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import Tree2 from '../assets/Tree2.svg';
+import our from '../assets/ourservicpicture.png';
 
 import Logo from '../assets/Logo.svg';
 import Bronze from '../assets/Badges/Bronze.svg';
@@ -249,11 +250,22 @@ export default function Ourservice() {
                 <h1 className="text-3xl md:text-[50px] font-bold pt-[50px] md:pt-[100px] text-center px-4 md:px-8 pb-5">
                     멘토링을 진행하며 성장하세요!
                 </h1>
+                <h1 className="text-xl md:text-[20px] font-bold pt-[20px] md:pt-[100px] text-center px-4 md:px-8 pb-5">
+                    원하는 멘토에게 멘토링 요청을 보내고, 멘토링방이 만들어져 멘토링을 진행해요!
+                </h1>
+                <img 
+                    src={our} 
+                    alt="Leaf" 
+                    className="w-[100px] h-[100px] md:w-[800px] md:h-[300px] object-contain" 
+                />
                 <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-6 md:gap-20 px-4 md:px-0">
                     <IoPerson className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
                     <IoPerson className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
                     <IoPerson className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
                     <IoPerson className="h-[80px] w-[80px] md:h-[150px] md:w-[150px]" />
+                   
+
+
                 </div>
             </div>
 
