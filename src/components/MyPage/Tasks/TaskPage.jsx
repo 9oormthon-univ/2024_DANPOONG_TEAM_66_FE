@@ -1,7 +1,7 @@
 import TaskBox from './TaskBox';
 
 // 더미데이터
-const tasks = [
+const taskList = [
   {
     id: 1,
     image: 'https://via.placeholder.com/150',
@@ -29,7 +29,7 @@ export default function TaskPage() {
   return (
     <div>
       <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 px-10 mt-10'>
-        {tasks.map((task) => (
+        {taskList.map((task) => (
           <div 
             key={task.id}
             className="flex justify-center"
