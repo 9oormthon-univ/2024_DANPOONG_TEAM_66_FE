@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './pages/_Layout.jsx';
 import MainPage from './pages/MainPage.jsx';
+import Home from './pages/Home.jsx';
 import Ourservice from './pages/Ourservice.jsx';
 import Community from './pages/Community.jsx';
 import MyPage from './pages/MyPage.jsx';
@@ -14,6 +15,7 @@ export default function Routers() {
       element: <Layout />,
       children: [
         { path: '/', element: <MainPage /> },
+        { path: '/home', element: <Home /> },
         { path: '/ourservice', element: <Ourservice />},
         { path: '/community', element: <Community />},
         { path: '/mypage/*', element: <MyPage /> },

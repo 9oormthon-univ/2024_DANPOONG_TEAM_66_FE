@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 // 더미 데이터
 // 특정 유저 id 함께 보내는 경우
 // mentoring 으로 멘토, 멘티 구분

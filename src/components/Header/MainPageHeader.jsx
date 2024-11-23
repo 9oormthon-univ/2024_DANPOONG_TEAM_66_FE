@@ -9,9 +9,11 @@ import Vector from '../../assets/vector.svg';
 import Tree from '../../assets/Tree.svg';
 import Cloud from '../../assets/cloud.svg';
 import Information from '../../assets/information.svg';
+import useProfileData from '../../hooks/useProfileData';
 
 export default function MainPageHeader() {
   const navigate = useNavigate();
+  const ProfileData = useProfileData(); // ProfileData 초기값은 {}
   const [isMobile, setIsMobile] = useState(false);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [showMyPageDropdown, setShowMyPageDropdown] = useState(false);
@@ -124,6 +126,7 @@ export default function MainPageHeader() {
               <MobileMenu
                 openMobileMenu={openMobileMenu}
                 setOpenMobileMenu={setOpenMobileMenu}
+                ProfileData={ProfileData}
               />
             </>
           ) : (
@@ -146,6 +149,7 @@ export default function MainPageHeader() {
               >
                 Our Service
               </button>
+
               
               <div
                 className='flex items-center gap'
