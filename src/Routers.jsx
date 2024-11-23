@@ -1,10 +1,12 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './pages/_Layout.jsx';
 import MainPage from './pages/MainPage.jsx';
-import Login from './pages/Login.jsx';
-import MyPage from './pages/MyPage.jsx';
+import Home from './pages/Home.jsx';
 import Ourservice from './pages/Ourservice.jsx';
+import Community from './pages/Community.jsx';
+import MyPage from './pages/MyPage.jsx';
 import Profile from './pages/Profile.jsx';
+import Login from './pages/Login.jsx';
 
 export default function Routers() {
   const router = createBrowserRouter([
@@ -13,10 +15,12 @@ export default function Routers() {
       element: <Layout />,
       children: [
         { path: '/', element: <MainPage /> },
-        { path: '/login', element: <Login /> },
-        { path: '/mypage/*', element: <MyPage /> },
+        { path: '/home', element: <Home /> },
         { path: '/ourservice', element: <Ourservice />},
+        { path: '/community', element: <Community />},
+        { path: '/mypage/*', element: <MyPage /> },
         { path: '/profile', element: <Profile />},
+        { path: '/login', element: <Login /> },
       ],
     },
     {
