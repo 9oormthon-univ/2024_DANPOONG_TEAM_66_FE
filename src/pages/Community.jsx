@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route, useNavigate, useLocation, Navigate } from "react-router-dom";
 import MenuButton from "../components/Common/MenuButton";
 import MobileMenuButton from "../components/Common/MobileMenuButton";
 import cn from "../utils/cn";
@@ -6,11 +7,26 @@ import RequestPage from "../components/Community/Request/RequestPage";
 import MyMentoringPage from "../components/Community/MyMentoring/MyMentoringPage";
 
 export default function Community() {
-  const [buttonClicked, setButtonClicked] = useState('멘토링 요청');
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // 현재 URL 경로를 기준으로 버튼 상태 설정
+  const currentPath = location.pathname.split('/').pop();
+  const [buttonClicked, setButtonClicked] = useState(
+    currentPath === "mymentoring" ? "나의 멘토링" : "멘토링 요청"
+  );
+
   const menuItems = [
-    { text: "멘토링 요청" },
-    { text: "나의 멘토링" },
+    { text: "멘토링 요청", path: "request" },
+    { text: "나의 멘토링", path: "mymentoring" },
   ];
+
+  // 버튼 클릭 시 상태 변경 및 라우팅
+  const handleButtonClick = (text, path) => {
+    setButtonClicked(text);
+    navigate(`/community/${path}`);
+  };
+
   return (
     <div className="h-screen flex flex-col">
       {/* 모바일 환경: 상단 메뉴 */}
@@ -20,7 +36,7 @@ export default function Community() {
             key={item.text}
             text={item.text}
             buttonClicked={buttonClicked}
-            setButtonClicked={setButtonClicked}
+            setButtonClicked={(text) => handleButtonClick(text, item.path)}
           />
         ))}
       </div>
@@ -36,18 +52,20 @@ export default function Community() {
           {menuItems.map((item) => (
             <MenuButton
               key={item.text}
-              icon={item.icon}
               text={item.text}
               buttonClicked={buttonClicked}
-              setButtonClicked={setButtonClicked}
+              setButtonClicked={(text) => handleButtonClick(text, item.path)}
             />
           ))}
         </div>
 
-        {/* 콘텐츠 영역 */}
+        {/* 콘텐츠 영역: Routes 사용 */}
         <div className="flex-1">
-          {buttonClicked === "멘토링 요청" && <RequestPage />}
-          {buttonClicked === "나의 멘토링" && <MyMentoringPage />}
+          <Routes>
+            <Route path="request" element={<RequestPage />} />
+            <Route path="mymentoring" element={<MyMentoringPage />} />
+            <Route path="*" element={<Navigate to="request" replace />} />
+          </Routes>
         </div>
       </div>
     </div>
