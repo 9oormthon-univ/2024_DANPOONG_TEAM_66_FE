@@ -4,6 +4,7 @@ const CommunityUserList = [
   {
     id: 1,
     name: '홍길동',
+    interest: "마케팅",
     badgeData: [
       {
         badgeType: 'Green',
@@ -26,6 +27,7 @@ const CommunityUserList = [
   {
     id: 2,
     name: '김철수',
+    interest: "프로그래밍",
     badgeData: [
       {
         badgeType: 'Green',
@@ -48,6 +50,7 @@ const CommunityUserList = [
   {
     id: 3,
     name: '이영희',
+    interest: "프로그래밍",
     badgeData: [
       {
         badgeType: 'Green',
@@ -70,6 +73,7 @@ const CommunityUserList = [
   {
     id: 4,
     name: '박민수',
+    interest: "경영",
     badgeData: [
       {
         badgeType: 'Green',
@@ -92,6 +96,7 @@ const CommunityUserList = [
   {
     id: 5,
     name: '김미영',
+    interest: "경영",
     badgeData: [
       {
         badgeType: 'Green',
