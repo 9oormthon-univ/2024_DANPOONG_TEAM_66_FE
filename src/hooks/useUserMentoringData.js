@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 // 특정 유저 id 함께 보내는 경우
 // mentoring 으로 멘토, 멘티 구분
 // 요청에 첨부한 id와 관련된 유저 정보만 넘겨주시면 좋겠습니다!
-import { useState, useEffect } from "react";
 const UserMentoringData = [
   {
     id: 1,
